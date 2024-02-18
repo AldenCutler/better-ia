@@ -1,0 +1,232 @@
+@-moz-document domain(ia.wpi.edu) {
+    :root {
+        --link-visited: #800;
+        --sec-head: #f00;
+    }
+    
+    
+    body {
+        font-family: helvetica, arial, sans-serif;
+        color: #000000;
+        font-size: 11pt;
+        background-color: #ffffff;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: bold;
+    }
+    
+    h2,h3,h4,h5,h6 {
+        color: var(--sec-head);
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.5em;
+    }
+    
+    
+    a {
+        text-decoration: none;
+        color: #2a4c84;
+        border-bottom: 1px dashed #2a4c84;
+    }
+    
+    a:visited {
+        color: var(--link-visited); 
+        text-decoration: none;
+        border-bottom: 1px dashed #2a4c84;
+    }
+    
+    a:hover {
+        color: #FFFFFF;
+        background-color: #2a4c84;
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    a.logo {
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    a.logo:visited {
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    a.logo:hover {
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    img {                                     
+        border-style: solid;                  
+        border-width: thin;                   
+        border-color: #000000;
+    }  
+    
+    /* Header */
+    
+    #header {
+        height:70px;
+        background: #2a4c84;
+        border: solid 1px #000;
+        padding: 0px;
+        margins: 0px;
+    }
+    
+    #header_inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 800px;
+        height:70px;
+        margin: 0px 50px 0px 0px;
+    }
+    
+    div.float1000 {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 90%;
+    }
+    
+    /* Menu */
+    
+    #menu {
+        position: absolute;
+        right: 0em;
+        bottom: 0em;
+    }
+    
+    #menu ul {
+        list-style: none;
+    }
+    
+    #menu li {
+        float: left;
+    }
+    
+    #menu li a {
+        margin-left: 0.5em;
+        display: block;
+        padding: 1.1em 1.4em 1.0em 1.4em;
+        background: #fff repeat-x;
+        border: solid 1px #000;
+        color: #000000;
+        font-weight: bold;
+        font-size: 1.0em;
+        text-decoration: none;
+    }
+    
+    #menu li a.active {
+        background: #2a4c84 repeat-x;
+        color: #fff;
+        border: solid 1px #468BAE;
+    }
+    
+    #menu li a:hover {
+        /* background: #000000; */
+        background: #009dff;
+        color: #FFFFFF;
+    }
+    
+    
+    /* Footer */
+    
+    #footer {
+        text-align: center;
+        height: 40px;
+        background: #777777;
+        color: #ffffff;
+        padding: 10px;
+    }
+    
+    #footer table {
+        border: 0px;
+    }
+    #footer td {
+        border: 0px;
+    }
+    
+    #footer a {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    #footer a:visited {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    #footer a:hover {
+        color: #ffffff;
+        background-color: #777777;
+        text-decoration: none;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    
+    table.zebra {
+        border: 1px solid #000000;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        padding: 1px;
+    }
+    
+    table.zebra th {
+        background: #2a4c84;
+        color: #ffffff;
+    }
+    
+    table.zebra tr:nth-child(odd) {
+        background-color: #D6D6D6;
+    }
+        
+    
+    TABLE.researchEditorTable TH { text-align: center; }
+    TABLE.researchEditorTable TD { text-align: center; }
+    
+    .revealTextBullet {
+        text-decoration: none;
+        color: #2a4c84;
+        border-bottom: 1px dashed #2a4c84;
+    }
+    .revealTextBullet:hover {
+        color: #FFFFFF;
+        background-color: #2a4c84;
+        text-decoration: none;
+        border-bottom: 0px;
+    }
+    
+    .revealTextParent {
+        border:1px solid #2a4c84;
+        background-color:#ddeaff;
+        /*width:400px;*/
+        
+        text-align: left;
+        visibility:hidden;
+        height:0px;
+        overflow:hidden;
+        position:relative;
+    }
+    .revealTextChild {
+        padding:1px;
+        font-size:0.9em;    
+        position:relative;
+        text-align: left;
+    }    
+}
