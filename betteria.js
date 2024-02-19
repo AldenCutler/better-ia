@@ -19,7 +19,7 @@ fetch(chrome.runtime.getURL("userContent.css"))
     // if we're on the main page, replace iframe with div containing inject.html
     if (window.location.href == "https://ia.wpi.edu/cs3013-andrews/") {
         var iframe = document.querySelector("iframe");
-        iframe.src = chrome.runtime.getURL("inject.html");
+        iframe.src = chrome.runtime.getURL("iframe.html");
         iframe.style.width = "90%";
         iframe.width = "90%";
     }
