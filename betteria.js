@@ -1,22 +1,28 @@
-// console.log(document.styleSheets);
+console.clear();
 
-// var styles = document.styleSheets[0];
-// var rules = styles.cssRules;
-// let count = 0;
-
-// for (var i = 0; i < rules.length; i++) {
-//     let text = rules[i].cssText;
-//     // console.log(text);
+var style = document.createElement("style");
+fetch(chrome.runtime.getURL("userContent.css"))
+.then((response) => response.text())
+.then((data) => {
+    // inject userContent.css to the page
+    style.innerHTML = data;
+    document.head.appendChild(style);
     
-//     if (text.includes('background-color')) {
-//         let element = text.split('{')[0].trim();
-//         // console.log(element, count++);
-        
-//     }
-// }
+    // remove the original stylesheet.css
+    var links = document.getElementsByTagName("link");
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].href.includes("stylesheet.css")) {
+            links[i].parentNode.removeChild(links[i]);
+        }
+    }
+    
+    // if we're on the main page, replace iframe with div containing inject.html
+    if (window.location.href == "https://ia.wpi.edu/cs3013-andrews/") {
+        var iframe = document.querySelector("iframe");
+        iframe.src = chrome.runtime.getURL("inject.html");
+        iframe.style.width = "90%";
+        iframe.width = "90%";
+    }
+});
 
-let link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = 'userContent.css';
-
-document.head.appendChild(link);
+console.log("BetterIA.js loaded");

@@ -11,7 +11,7 @@
   
     "content_scripts": [
       {
-        "matches": ["*://*.ia.wpi.edu/*"],
+        "matches": ["*://*.ia.wpi.edu/*", "*://web.cs.wpi.edu/~tha/cs3013/*"],
         "js": ["betteria.js"]
       }
     ]
