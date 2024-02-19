@@ -51,6 +51,12 @@ h1 span { font-weight: bold; }
 h3 span { font-weight: bold; }
 h4 span { font-weight: bold; }
 
+#main > div > p > span {
+    color: #000;
+    /* padding: 0.2em;
+    margin: 0.5em; */
+}
+
 a {
     text-decoration: none;
     color: var(--link);
